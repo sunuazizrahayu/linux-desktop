@@ -26,4 +26,8 @@ echo "hide mail reader..."
 sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-mail-reader.desktop
 
 
+# copy
+echo "Copying skel"
+cp -R remaster/. /
+
 printf "\n\n\nFinish."
