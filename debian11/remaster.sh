@@ -19,4 +19,11 @@ Section "InputClass"
 EndSection
 EOF
 
+
+
+# hide mail reader
+echo "hide mail reader..."
+sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-mail-reader.desktop
+
+
 printf "\n\n\nFinish."
