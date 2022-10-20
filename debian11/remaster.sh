@@ -18,3 +18,5 @@ Section "InputClass"
     Option "NaturalScrolling" "True"
 EndSection
 EOF
+
+printf "\n\n\nFinish."
