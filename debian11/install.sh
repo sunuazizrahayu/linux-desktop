@@ -13,7 +13,7 @@ echo "Updating repo"
 apt update
 
 # tools
-apt install sudo curl wget lsb-release -y
+apt install sudo curl wget lsb-release git -y
 
 # install mine deps
 apt install \
