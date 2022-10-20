@@ -41,6 +41,7 @@ apt install \
   sublime-text sublime-merge \
   code \
   docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose \
+  beekeeper-studio \
   -y
 
 printf "\nSoftware Installed...\n"
