@@ -51,4 +51,4 @@ sed -i 's/main/main contrib non-free/g' /etc/apt/sources.list
 apt update
 
 echo "Installing AMD Radeon Driver"
-apt install firmware-amd-graphics libgl1-mesa-dri
+apt install firmware-amd-graphics libgl1-mesa-dri -y
