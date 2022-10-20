@@ -29,6 +29,6 @@ sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-ma
 
 # copy
 echo "Copying skel"
-cp -R $(SCRIPT_DIR)/remaster/. /
+cp -R $SCRIPT_DIR/remaster/. /
 
 printf "\n\n\nFinish.\n\n"
