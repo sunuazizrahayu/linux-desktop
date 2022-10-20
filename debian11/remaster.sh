@@ -6,6 +6,7 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 printf "Configure touchpad.."
 rm /etc/X11/xorg.conf.d/99-libinput.conf > /dev/null
@@ -28,6 +29,6 @@ sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-ma
 
 # copy
 echo "Copying skel"
-cp -R remaster/. /
+cp -R $(SCRIPT_DIR)/remaster/. /
 
-printf "\n\n\nFinish."
+printf "\n\n\nFinish.\n\n"
