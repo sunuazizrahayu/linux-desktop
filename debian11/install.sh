@@ -6,6 +6,12 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
+echo "Adding 'contrib non-free' on repo.."
+sed -i 's/main/main contrib non-free/g' /etc/apt/sources.list
+
+echo "Updating repo"
+apt update
+
 # tools
 apt install sudo curl wget lsb-release -y
 
