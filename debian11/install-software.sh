@@ -34,6 +34,7 @@ printf "\n\nInstalling Software...\n"
 apt install \
   sublime-text sublime-merge \
   code \
-  docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose
+  docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose \
+  -y
 
 printf "\nSoftware Installed...\n"
