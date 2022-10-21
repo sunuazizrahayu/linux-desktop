@@ -27,7 +27,11 @@ echo "hide mail reader..."
 sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-mail-reader.desktop
 
 
-# copy skel
+# copy master `skel`
+echo "Copying skel"
+cp -R $SCRIPT_DIR/remaster/. /
+
+# copy master `skel` to each user
 input="/etc/passwd"
 while IFS= read -r line
 do
@@ -35,7 +39,7 @@ do
     USER=$(echo $line | sed 's/:.*//')
     #echo $USER
     echo "Copying skel to user: " $(USER)
-    cp -R $SCRIPT_DIR/remaster/. /home/$USER/
+    cp -R $SCRIPT_DIR/remaster/etc/skel/.config/ /home/$USER/
   fi
 done < "$input"
 
