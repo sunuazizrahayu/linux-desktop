@@ -38,7 +38,7 @@ do
   if [[ "$line" == *':/home/'* ]]; then
     USER=$(echo $line | sed 's/:.*//')
     #echo $USER
-    echo "Copying skel to user: " $(USER)
+    echo "Copying skel to user: " $USER
     cp -R $SCRIPT_DIR/remaster/etc/skel/.config/ /home/$USER/
   fi
 done < "$input"
