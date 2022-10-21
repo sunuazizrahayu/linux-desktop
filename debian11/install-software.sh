@@ -42,6 +42,7 @@ apt install \
   code \
   docker-ce docker-ce-cli containerd.io docker-compose-plugin docker-compose \
   beekeeper-studio \
+  chromium \
   -y
 
 printf "\nSoftware Installed...\n"
