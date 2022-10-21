@@ -35,11 +35,7 @@ apt install \
   xfconf \
   xfdesktop4 \
   xfwm4 \
-  \
   thunar \
-  mousepad \
-  xarchiver \
-  ristretto \
   \
   xfce4-power-manager \
   xfce4-pulseaudio-plugin \
@@ -49,8 +45,11 @@ apt install \
   network-manager-openvpn \
   network-manager-openvpn-gnome \
   \
+  mousepad \
+  xarchiver \
+  ristretto \
+  \
   firefox-esr \
-  chromium \
   \
   -y
 
