@@ -8,6 +8,12 @@ fi
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+printf "\n\nInstalling Fonts\n"
+apt install \
+  fonts-cantarell \
+  fonts-ubuntu
+
+
 printf "\n\n\nConfigure touchpad..\n"
 rm /etc/X11/xorg.conf.d/99-libinput.conf > /dev/null
 cat << EOF > /etc/X11/xorg.conf.d/99-libinput.conf
