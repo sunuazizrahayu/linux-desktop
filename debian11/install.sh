@@ -27,6 +27,7 @@ apt install \
 
 # install mine deps
 apt install \
+  xfce4-whiskermenu-plugin \
   xfce4-appfinder \
   xfce4-panel \
   xfce4-session \
@@ -46,7 +47,7 @@ apt install \
   network-manager-openvpn-gnome \
   \
   mousepad \
-  xarchiver \
+  xarchiver thunar-archive-plugin \
   ristretto \
   \
   firefox-esr \
