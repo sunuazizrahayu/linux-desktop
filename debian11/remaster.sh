@@ -40,7 +40,7 @@ do
     #echo $USER
     echo "Copying skel to user: " $USER
     cp -R $SCRIPT_DIR/remaster/etc/skel/.config/ /home/$USER/
-    chown -r $USER:$USER /home/$USER/.config/
+    chown -R $USER:$USER /home/$USER/.config/
   fi
 done < "$input"
 
