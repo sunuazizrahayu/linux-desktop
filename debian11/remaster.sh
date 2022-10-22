@@ -33,6 +33,22 @@ EOF
 echo "hide mail reader..."
 sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-mail-reader.desktop
 
+# configure firefox
+echo "configure firefox.."
+echo "removing title bar"
+sed -i 's/pref("browser.tabs.inTitlebar", 1);//g' /etc/firefox-esr/firefox-esr.js
+cat << EOF >> /etc/firefox-esr/firefox-esr.js
+pref("browser.tabs.inTitlebar", 1);
+EOF
+
+echo "enable doh"
+sed -i 's/pref("network.trr.mode", 2);//g' /etc/firefox-esr/firefox-esr.js
+sed -i 's/pref("network.trr.uri", "1.1.1.1");//g' /etc/firefox-esr/firefox-esr.js
+cat << EOF >> /etc/firefox-esr/firefox-esr.js
+pref("network.trr.mode", 2);
+pref("network.trr.uri", "1.1.1.1");
+EOF
+
 
 # copy master `skel`
 echo "Copying skel"
