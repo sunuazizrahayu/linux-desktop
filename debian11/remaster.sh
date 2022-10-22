@@ -11,7 +11,8 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 printf "\n\nInstalling Fonts\n"
 apt install \
   fonts-cantarell \
-  fonts-ubuntu
+  fonts-ubuntu \
+  -y
 
 
 printf "\n\n\nConfigure touchpad..\n"
