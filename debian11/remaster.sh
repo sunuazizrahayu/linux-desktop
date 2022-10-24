@@ -32,7 +32,7 @@ printf "\n\nconfiguring firefox..."
 cp $SCRIPT_DIR/remaster/etc/firefox-esr/firefox-esr.js /etc/firefox-esr/firefox-esr.js
 
 # copy master `skel`
-printf "\n\nCOPYING skel"
+printf "\n\nCOPYING skel\n"
 cp -R $SCRIPT_DIR/remaster/etc/skel/. /etc/skel
 
 # copy master `skel` to each user
