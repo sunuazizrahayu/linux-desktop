@@ -14,6 +14,11 @@ apt install \
   fonts-ubuntu \
   -y
 
+printf "\nInstalling Microsoft Fonts\n"
+apt install \
+  ttf-mscorefonts-installer \
+  -y
+
 
 printf "\n\n\nConfigure touchpad..\n"
 rm /etc/X11/xorg.conf.d/99-libinput.conf > /dev/null
