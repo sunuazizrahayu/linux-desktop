@@ -21,6 +21,9 @@ Section "InputClass"
 EndSection
 EOF
 
+printf "\nConfiguring SuperL open whiskermenu\n"
+cp -r $SCRIPT_DIR/remaster/etc/xdg/ /etc/
+
 
 
 # hide mail reader
@@ -41,7 +44,6 @@ while IFS= read -r line
 do
   if [[ "$line" == *':/home/'* ]]; then
     USER=$(echo $line | sed 's/:.*//')
-    #echo $USER
     echo "Copying skel to user: " $USER
     cp -R $SCRIPT_DIR/remaster/etc/skel/.config/ /home/$USER/
     chown -R $USER:$USER /home/$USER/.config/
@@ -49,4 +51,4 @@ do
 done < "$input"
 
 
-printf "\n\n\nFinish.\n\n"
+printf "\n\nFinish.\n"
