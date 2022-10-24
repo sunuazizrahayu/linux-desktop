@@ -22,7 +22,7 @@ EndSection
 EOF
 
 printf "\nConfiguring SuperL open whiskermenu\n"
-cp -r $SCRIPT_DIR/remaster/etc/xdg/ /etc/
+cp -r $SCRIPT_DIR/remaster/etc/xdg/autostart/ /etc/xdg/
 
 
 
