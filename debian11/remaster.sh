@@ -24,14 +24,15 @@ EOF
 
 
 # hide mail reader
-echo "hide mail reader..."
+printf "\nhide mail reader..."
 sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-mail-reader.desktop
 
 # configure firefox
+printf "\n\nconfiguring firefox..."
 cp $SCRIPT_DIR/remaster/etc/firefox-esr/firefox-esr.js /etc/firefox-esr/firefox-esr.js
 
 # copy master `skel`
-echo "Copying skel"
+printf "\n\nCOPYING skel"
 cp -R $SCRIPT_DIR/remaster/etc/skel/. /etc/skel
 
 # copy master `skel` to each user
