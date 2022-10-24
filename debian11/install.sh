@@ -8,11 +8,11 @@ fi
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-#echo "Adding 'contrib non-free' on repo.."
-#sed -i 's/main contrib non-free/main/g' /etc/apt/sources.list
-#sed -i 's/main/main contrib non-free/g' /etc/apt/sources.list
-echo "Using setup config repo"
-cp $SCRIPT_DIR/remaster/etc/apt/sources.list /etc/apt/sources.list
+echo "Adding 'contrib non-free' on repo.."
+sed -i 's/main contrib non-free/main/g' /etc/apt/sources.list
+sed -i 's/main/main contrib non-free/g' /etc/apt/sources.list
+#echo "Using setup config repo"
+#cp $SCRIPT_DIR/remaster/etc/apt/sources.list /etc/apt/sources.list
 
 echo "Updating repo"
 apt update
