@@ -22,6 +22,7 @@ EndSection
 EOF
 
 printf "\nConfiguring SuperL open whiskermenu\n"
+apt install xcape
 cp -r $SCRIPT_DIR/remaster/etc/xdg/autostart/ /etc/xdg/
 
 
