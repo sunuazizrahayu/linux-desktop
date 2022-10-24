@@ -32,7 +32,7 @@ cp /etc/firefox-esr/firefox-esr.js.ori /etc/firefox-esr/firefox-esr.js
 
 # copy master `skel`
 echo "Copying skel"
-cp -R $SCRIPT_DIR/remaster/. /
+cp -R $SCRIPT_DIR/remaster/etc/skel/. /etc/skel
 
 # copy master `skel` to each user
 input="/etc/passwd"
