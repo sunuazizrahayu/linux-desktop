@@ -39,5 +39,5 @@ pref("network.trr.mode", 2);
 pref("network.trr.uri", "https://mozilla.cloudflare-dns.com/dns-query");
 
 //default font
-pref("font.name.serif.x-western, "Times New Roman");
-pref("font.name.sans-serif.x-western, "Arial");
+pref("font.name.serif.x-western", "Times New Roman");
+pref("font.name.sans-serif.x-western", "Arial");
