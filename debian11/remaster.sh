@@ -24,10 +24,12 @@ EOF
 printf "\nConfiguring SuperL open whiskermenu\n"
 apt install xcape -y
 
+printf "\nInstall OCS-URL"
+dpkg -i $SCRIPT_DIR/ocs-url*.deb; apt install --fix-broken -y
 
 
 # hide mail reader
-printf "\nhide mail reader..."
+printf "\n\nhide mail reader..."
 sed -i 's/OnlyShowIn=XFCE;/OnlyShowIn=XFCEx;/g' /usr/share/applications/xfce4-mail-reader.desktop
 
 # configure firefox
