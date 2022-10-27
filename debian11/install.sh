@@ -60,7 +60,7 @@ apt install \
 
 # Fixing AMD Radeon Driver
 echo "Installing AMD Radeon Driver"
-apt install firmware-amd-graphics libgl1-mesa-dri -y
+apt install firmware-amd-graphics firmware-realtek libgl1-mesa-dri -y
 
 
 
