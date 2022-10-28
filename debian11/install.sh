@@ -50,6 +50,7 @@ apt install \
   network-manager-openvpn \
   network-manager-openvpn-gnome \
   \
+  gnome-icon-theme \
   mousepad \
   xarchiver thunar-archive-plugin \
   ristretto \
@@ -57,6 +58,7 @@ apt install \
   firefox-esr \
   \
   -y
+
 
 # Fixing AMD Radeon Driver
 echo "Installing AMD Radeon Driver"
