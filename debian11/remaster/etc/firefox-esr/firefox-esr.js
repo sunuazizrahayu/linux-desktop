@@ -44,3 +44,6 @@ pref("font.name.sans-serif.x-western", "Arial");
 
 //ask before close
 pref("browser.tabs.warnOnClose", true);
+
+//show toolbar
+pref("browser.toolbars.bookmarks.visibility", "newtab");
