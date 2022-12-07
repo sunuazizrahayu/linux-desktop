@@ -49,6 +49,10 @@ apt install \
   network-manager-gnome \
   network-manager-openvpn \
   network-manager-openvpn-gnome \
+  network-manager-pptp \
+  network-manager-pptp-gnome \
+  network-manager-l2tp \
+  network-manager-l2tp-gnome \
   \
   gnome-icon-theme \
   mousepad \
