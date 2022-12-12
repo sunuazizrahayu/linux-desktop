@@ -63,6 +63,9 @@ apt install \
   \
   -y
 
+echo "Install mounter ISO"
+apt install gnome-disk-utility
+
 
 # Fixing AMD Radeon Driver
 echo "Installing AMD Radeon Driver"
