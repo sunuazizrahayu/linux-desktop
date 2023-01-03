@@ -77,6 +77,7 @@ printf "\n\nInstalling Fonts\n"
 apt install \
   fonts-cantarell \
   fonts-ubuntu \
+  fonts-takao fonts-mona \
   -y
 
 printf "\nInstalling Microsoft Fonts\n"
