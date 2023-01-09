@@ -6,6 +6,8 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
+apt wget git install lsb-release -y
+
 
 printf "\nAdd Sublime repo...\n"
 rm /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
@@ -15,12 +17,12 @@ echo "deb [signed-by=/etc/apt/trusted.gpg.d/sublimehq-archive.gpg] https://downl
 apt update && apt install sublime-text sublime-merge -y
 
 
-printf "\n\nAdd VSCode...\n"
-rm /etc/apt/trusted.gpg.d/vscode.gpg
-rm /etc/apt/sources.list.d/vscode.list
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/vscode.gpg > /dev/null
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
-#apt update && apt install code -y
+# printf "\n\nAdd VSCode...\n"
+# rm /etc/apt/trusted.gpg.d/vscode.gpg
+# rm /etc/apt/sources.list.d/vscode.list
+# wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/vscode.gpg > /dev/null
+# echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+# apt update && apt install code -y
 
 
 printf "\n\nBeekeeper SQL Editor...\n"
