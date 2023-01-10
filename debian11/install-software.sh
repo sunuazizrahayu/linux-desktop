@@ -6,8 +6,6 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
-apt wget git install lsb-release -y
-
 
 printf "\nAdd Sublime repo...\n"
 rm /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
