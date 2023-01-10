@@ -7,6 +7,11 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 
+printf "\nAdd VitexSoftware repo...\n"
+wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/vitexsoftware.gpg
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com  buster main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
+
+
 printf "\nAdd Sublime repo...\n"
 rm /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
 rm /etc/apt/sources.list.d/sublime-text.list
