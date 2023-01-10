@@ -6,10 +6,15 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
+printf "\nInstall requirements to install software...\n"
+apt install wget curl lsb-release
+
 
 printf "\nAdd VitexSoftware repo...\n"
+rm /etc/apt/trusted.gpg.d/vitexsoftware.gpg
+rm /etc/apt/sources.list.d/vitexsoftware.list
 wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/vitexsoftware.gpg
-echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com  buster main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
+echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com buster main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 
 
 printf "\nAdd Sublime repo...\n"
