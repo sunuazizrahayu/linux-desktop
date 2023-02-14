@@ -2,6 +2,10 @@ echo "Updating repo..."
 sudo yum check-update
 echo ""
 
+echo "Upgrade.."
+sudo yum upgrade -y
+echo ""
+
 echo "Removing Apache"
 sudo yum erase -y httpd httpd-tools apr apr-util
 echo ""
