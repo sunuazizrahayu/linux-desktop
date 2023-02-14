@@ -14,6 +14,11 @@ echo "Install Requirements..."
 sudo yum install -y nano bash-completion
 echo ""
 
+echo "Install NGINX"
+sudo yum install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
 echo "Installing Docker..."
 sudo yum remove -y docker \
     docker-client \
