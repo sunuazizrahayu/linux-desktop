@@ -11,8 +11,8 @@ sudo yum erase -y httpd httpd-tools apr apr-util
 echo ""
 
 echo "Install Requirements..."
-sudo yum install -y nano bash-completion \
-    epel-release
+sudo yum install -y epel-release
+sudo yum install -y nano bash-completion
 echo ""
 
 echo "Install NGINX"
