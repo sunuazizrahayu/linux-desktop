@@ -2,13 +2,16 @@ echo "Updating repo..."
 sudo yum check-update
 echo ""
 
-echo "Upgrade.."
-sudo yum upgrade -y
-echo ""
-
 echo "Removing Apache"
 sudo yum erase -y httpd httpd-tools apr apr-util
 echo ""
+
+echo "Upgrade.."
+sudo yum check-update
+sudo yum upgrade -y
+echo ""
+
+
 
 echo "Install Requirements..."
 sudo yum install -y epel-release
@@ -16,7 +19,7 @@ sudo yum install -y nano bash-completion
 echo ""
 
 echo "Install NGINX"
-sudo yum install nginx
+sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
 
