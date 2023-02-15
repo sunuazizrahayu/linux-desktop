@@ -15,7 +15,7 @@ echo ""
 
 echo "Install Requirements..."
 sudo yum install -y epel-release
-sudo yum install -y nano bash-completion
+sudo yum install -y nano curl wget bash-completion
 echo ""
 
 echo "Install NGINX"
@@ -34,7 +34,7 @@ sudo yum remove -y docker \
     docker-engine
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
 echo ""
