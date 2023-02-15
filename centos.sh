@@ -40,11 +40,8 @@ sudo systemctl enable docker
 echo ""
 
 
-echo "Getting OpenVPN Install Script"
-wget https://git.io/vpn -O openvpn-install.sh
-
 echo "Getting WARP"
-wget https://github.com/fscarmen/warp/raw/main/menu.sh -O warp.sh
+wget https://github.com/fscarmen/warp/raw/main/menu.sh
 
 
 echo "Done..."
