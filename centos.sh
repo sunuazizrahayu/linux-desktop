@@ -39,4 +39,9 @@ sudo systemctl start docker
 sudo systemctl enable docker
 echo ""
 
+
+echo "Getting OpenVPN Install Script"
+wget https://git.io/vpn -O openvpn-install.sh
+
+
 echo "Done..."
