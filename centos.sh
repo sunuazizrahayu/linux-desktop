@@ -43,5 +43,7 @@ echo ""
 echo "Getting WARP"
 wget https://github.com/fscarmen/warp/raw/main/menu.sh
 
+echo "Install Speedtest"
+curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash && sudo yum install -y speedtest
 
 echo "Done..."
