@@ -1,29 +1,38 @@
-echo "Updating repo..."
+#!/bin/bash
+
+# init
+NC='\033[0m'
+YELLOW='\033[1;33m'
+
+
+
+echo -e "${YELLOW}Updating repo..."
 sudo yum check-update
-echo ""
+echo -e "${NC}"
 
-echo "Removing Apache"
+echo -e "${YELLOW}Removing Apache"
 sudo yum erase -y httpd httpd-tools apr apr-util
-echo ""
+echo -e "${NC}"
 
-echo "Upgrade.."
+echo -e "${YELLOW}Upgrade.."
 sudo yum check-update
 sudo yum upgrade -y
-echo ""
+echo -e "${NC}"
 
 
 
-echo "Install Requirements..."
+echo -e "${YELLOW}Install Requirements..."
 sudo yum install -y epel-release
 sudo yum install -y nano curl wget bash-completion
-echo ""
+echo -e "${NC}"
 
-echo "Install NGINX"
+echo -e "${YELLOW}Install NGINX"
 sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
+echo -e "${NC}"
 
-echo "Installing Docker..."
+echo -e "${YELLOW}Installing Docker..."
 sudo yum remove -y docker \
     docker-client \
     docker-client-latest \
@@ -37,14 +46,14 @@ sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/dock
 sudo yum install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
 sudo systemctl start docker
 sudo systemctl enable docker
-echo ""
+echo -e "${NC}"
 
 
-echo "Getting WARP"
+echo -e "${YELLOW}Getting WARP"
 wget https://github.com/fscarmen/warp/raw/main/menu.sh
 wget https://github.com/sunuazizrahayu/linux-conf/raw/main/warp.py
 
-echo "Install Speedtest"
+echo -e "${YELLOW}Install Speedtest"
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash && sudo yum install -y speedtest
 
-echo "Done..."
+echo -e "${YELLOW}Done..."
