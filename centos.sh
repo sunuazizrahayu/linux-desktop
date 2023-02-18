@@ -10,11 +10,11 @@ echo -e "${YELLOW}Updating repo...${NC}"
 sudo yum check-update
 echo ""
 
-echo -e "${YELLOW}Removing Apache"
+echo -e "${YELLOW}Removing Apache...${NC}"
 sudo yum erase -y httpd httpd-tools apr apr-util
 echo ""
 
-echo -e "${YELLOW}Upgrade..${NC}"
+echo -e "${YELLOW}Upgrade...${NC}"
 sudo yum check-update
 sudo yum upgrade -y
 echo ""
@@ -26,7 +26,7 @@ sudo yum install -y epel-release
 sudo yum install -y nano curl wget bash-completion
 echo ""
 
-echo -e "${YELLOW}Install NGINX"
+echo -e "${YELLOW}Install NGINX...${NC}"
 sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
@@ -49,11 +49,11 @@ sudo systemctl enable docker
 echo ""
 
 
-echo -e "${YELLOW}Getting WARP"
+echo -e "${YELLOW}Getting WARP...${NC}"
 wget https://github.com/fscarmen/warp/raw/main/menu.sh
 wget https://github.com/sunuazizrahayu/linux-conf/raw/main/warp.py
 
-echo -e "${YELLOW}Install Speedtest"
+echo -e "${YELLOW}Install Speedtest...${NC}"
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | sudo bash && sudo yum install -y speedtest
 
 echo -e "${YELLOW}Done...${NC}"
