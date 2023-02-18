@@ -23,7 +23,7 @@ echo ""
 
 echo -e "${YELLOW}Install Requirements...${NC}"
 sudo yum install -y epel-release
-sudo yum install -y nano curl wget bash-completion
+sudo yum install -y nano curl wget bash-completion htop
 echo ""
 
 echo -e "${YELLOW}Install NGINX...${NC}"
