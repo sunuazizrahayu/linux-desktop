@@ -43,8 +43,8 @@ echo ""
 
 
 echo -e "${YELLOW}Getting WARP...${NC}"
-wget https://github.com/fscarmen/warp/raw/main/menu.sh
-wget https://github.com/sunuazizrahayu/linux-conf/raw/main/warp.py
+wget https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh
+wget https://raw.githubusercontent.com/sunuazizrahayu/linux-conf/main/warp.py
 
 echo -e "${YELLOW}Install Speedtest...${NC}"
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | bash && yum install -y speedtest
