@@ -9,5 +9,4 @@ fi
 rm -rf centos.sh || true
 wget https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop-environment/main/centos.sh
 
-rm -rf centos_exec.sh || true
 nohup bash centos.sh &
