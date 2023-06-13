@@ -16,8 +16,17 @@ apt install \
   bash-completion \
   curl \
   wget \
-  lsb-release \
-  git \
-  \
   -y
 
+# xfce
+echo "Install XFCE"
+apt install \
+  xfce4-appfinder \
+  xfce4-panel \
+  xfce4-session \
+  xfce4-settings \
+  xfce4-terminal \
+  xfconf \
+  xfdesktop4 \
+  xfwm4 \
+  thunar
