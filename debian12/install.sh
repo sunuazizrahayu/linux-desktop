@@ -70,3 +70,7 @@ apt install \
 
 echo "Generate Fonts cache"
 fc-cache -f -v
+
+
+wget -c https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop-environment/main/debian12/xfce-docklike.sh
+wget -c https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop-environment/main/debian12/install-software.sh
