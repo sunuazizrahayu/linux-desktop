@@ -10,7 +10,8 @@ fi
 sudo apt install \
   xfce4-dev-tools make xorg-dev libglib2.0-dev libgtk-3-dev libwnck-3-dev \
   libxfce4ui-2-dev libxfce4panel-2.0-dev \
-  g++
+  g++ \
+  -y
 
 # install
 wget https://archive.xfce.org/src/panel-plugins/xfce4-docklike-plugin/0.4/xfce4-docklike-plugin-0.4.0.tar.bz2
@@ -22,4 +23,5 @@ sudo make install
 sudo apt purge \
   xfce4-dev-tools make xorg-dev libglib2.0-dev libgtk-3-dev libwnck-3-dev \
   libxfce4ui-2-dev libxfce4panel-2.0-dev \
-  g++
+  g++ \
+  -y
