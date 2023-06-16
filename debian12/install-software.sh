@@ -16,7 +16,7 @@ apt install wget curl \
 printf "\nAdd VitexSoftware repo...\n"
 rm /etc/apt/trusted.gpg.d/vitexsoftware.gpg
 rm /etc/apt/sources.list.d/vitexsoftware.list
-wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/vitexsoftware.gpg -> /dev/null
+wget -qO- https://repo.vitexsoftware.com/keyring.gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/vitexsoftware.gpg > /dev/null
 echo "deb [signed-by=/etc/apt/trusted.gpg.d/vitexsoftware.gpg]  https://repo.vitexsoftware.com bookworm main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 
 
