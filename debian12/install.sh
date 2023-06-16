@@ -32,7 +32,8 @@ apt install \
   thunar \
   -y
 
-# xfce panel addional
+# xfce panel addtional
+echo "Install XFCE additional"
 apt install \
   xfce4-netload-plugin \
   xfce4-notifyd \
@@ -41,7 +42,7 @@ apt install \
   xfce4-whiskermenu-plugin \
   -y
 
-echo "Install XFCE Networking"
+echo "Install Networking"
 apt install \
   network-manager-gnome \
   network-manager-openvpn \
@@ -52,7 +53,7 @@ apt install \
   network-manager-l2tp-gnome \
   -y
 
-echo "Install XFCE additional"
+echo "Install Software"
 apt install \
   mousepad \
   ristretto \
