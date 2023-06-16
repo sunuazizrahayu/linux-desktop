@@ -61,9 +61,11 @@ apt install \
   thunar-archive-plugin \
   -y
 
-echo "Install fonts"
+echo "Install appearance support"
 apt install \
   fonts-cantarell \
+  gnome-icon-theme \
+  tango-icon-theme \
   -y
 
 echo "Generate Fonts cache"
