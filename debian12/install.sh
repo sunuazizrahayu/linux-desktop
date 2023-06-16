@@ -19,18 +19,26 @@ apt install \
   -y
 
 # xfce
-echo "Install XFCE"
+echo "Install XFCE minimal"
 apt install \
   xfce4-appfinder \
   xfce4-panel \
   xfce4-session \
   xfce4-settings \
   xfce4-terminal \
-  xfce4-whiskermenu-plugin \
   xfconf \
   xfdesktop4 \
   xfwm4 \
   thunar \
+  -y
+
+# xfce panel addional
+apt install \
+  xfce4-netload-plugin \
+  xfce4-notifyd \
+  xfce4-power-manager \
+  xfce4-pulseaudio-plugin \
+  xfce4-whiskermenu-plugin \
   -y
 
 echo "Install XFCE Networking"
@@ -56,5 +64,6 @@ echo "Install fonts"
 apt install \
   fonts-cantarell \
   -y
+
 echo "Generate Fonts cache"
 fc-cache -f -v
