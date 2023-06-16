@@ -7,7 +7,8 @@ if ! [ $(id -u) = 0 ]; then
 fi
 
 # requirements
-apt install xfce4-dev-tools make xorg-dev libglib2.0-dev libgtk-3-dev libwnck-3-dev \
+sudo apt install \
+  xfce4-dev-tools make xorg-dev libglib2.0-dev libgtk-3-dev libwnck-3-dev \
   libxfce4ui-2-dev libxfce4panel-2.0-dev \
   g++
 
@@ -17,3 +18,8 @@ tar -xvjf xfce4-docklike-plugin-0.4.0.tar.bz2 && cd xfce4-docklike-plugin-0.4.0
 ./configure
 make
 sudo make install
+
+sudo apt purge \
+  xfce4-dev-tools make xorg-dev libglib2.0-dev libgtk-3-dev libwnck-3-dev \
+  libxfce4ui-2-dev libxfce4panel-2.0-dev \
+  g++
