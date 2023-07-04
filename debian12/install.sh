@@ -64,6 +64,8 @@ apt install \
 echo "Install appearance support"
 apt install \
   fonts-cantarell \
+  fonts-noto-core \
+  \
   gnome-icon-theme \
   tango-icon-theme \
   -y
