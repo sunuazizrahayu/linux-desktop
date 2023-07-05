@@ -59,6 +59,8 @@ apt install \
   ristretto \
   xarchiver \
   thunar-archive-plugin \
+  \
+  xcape \
   -y
 
 echo "Install appearance support"
