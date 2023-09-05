@@ -14,7 +14,7 @@ sudo apt install sublime-text sublime-merge -y
 
 
 # Install Docker
-sudo apt-get install ca-certificates curl gnupg
+sudo apt-get install ca-certificates curl gnupg -y
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -35,4 +35,4 @@ sudo apt-get update
 sudo apt install firefox-esr -y
 
 # Install htop
-sudo apt install htop
+sudo apt install htop -y
