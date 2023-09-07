@@ -36,3 +36,17 @@ sudo apt install firefox-esr -y
 
 # Install htop
 sudo apt install htop -y
+
+# Install speedtest
+sudo rm /etc/apt/keyrings/ookla_speedtest-cli-archive-keyring.gpg
+sudo rm /etc/apt/sources.list.d/ookla_speedtest-cli.list
+
+sudo curl -fsSL "https://packagecloud.io/ookla/speedtest-cli/gpgkey" | gpg --dearmor > /etc/apt/keyrings/ookla_speedtest-cli-archive-keyring.gpg
+sudo chmod 0644 /etc/apt/keyrings/ookla_speedtest-cli-archive-keyring.gpg
+echo \
+  "deb [signed-by=/etc/apt/keyrings/ookla_speedtest-cli-archive-keyring.gpg] https://packagecloud.io/ookla/speedtest-cli/ubuntu/ "$(. /etc/os-release && echo "$UBUNTU_CODENAME")" main
+deb-src [signed-by=/etc/apt/keyrings/ookla_speedtest-cli-archive-keyring.gpg] https://packagecloud.io/ookla/speedtest-cli/ubuntu/ "$(. /etc/os-release && echo "$UBUNTU_CODENAME")" main" \
+| sudo tee /etc/apt/sources.list.d/ookla_speedtest-cli.list > /dev/null
+
+sudo apt update
+sudo apt install speedtest -y
