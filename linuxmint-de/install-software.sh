@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # get debian codename
-DEBIAN_CODENAME=$(grep -o 'DEBIAN_CODENAME=[^ ]*' /etc/os-release | cut -d= -f2)
+#DEBIAN_CODENAME=$(grep -o 'DEBIAN_CODENAME=[^ ]*' /etc/os-release | cut -d= -f2)
 
 
 # install sublime
@@ -19,7 +19,7 @@ printf "\n\nInstall Docker...\n"
 sudo rm /etc/apt/trusted.gpg.d/docker.gpg
 sudo rm /etc/apt/sources.list.d/docker.list
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/docker.gpg  > /dev/null
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/docker.gpg] https://download.docker.com/linux/debian $DEBIAN_CODENAME stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/trusted.gpg.d/docker.gpg] https://download.docker.com/linux/debian "$(. /etc/os-release && echo "$DEBIAN_CODENAME")" stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y
 
