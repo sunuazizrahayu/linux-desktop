@@ -26,3 +26,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 # add user on docker
 printf "\n\nAdd User Docker...\n"
 sudo usermod -aG docker $(whoami)
+
+# prevent autostart docker
+printf "\n\nPrevent autostart Docker...\n"
+sudo systemctl disable docker
