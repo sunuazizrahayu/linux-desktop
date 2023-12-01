@@ -29,6 +29,7 @@ sudo systemctl start x11vnc
 sudo apt install \
   armbian-config \
   \
+  pavucontrol \
   pulseaudio \
   xfce4-pulseaudio-plugin \
   \
