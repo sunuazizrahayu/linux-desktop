@@ -25,6 +25,7 @@ printf "\n\n\n"
 echo "Install XFCE"
 sudo apt install \
   xorg \
+  lightdm \
   xfce4-panel \
   xfce4-session \
   xfce4-terminal \
@@ -37,10 +38,7 @@ printf "\n\n\n"
 
 # install vnc
 echo "Install VNC"
-sudo apt install \
-  lightdm \
-  x11vnc \
-  -y
+sudo apt install x11vnc -y
 
 sudo x11vnc -storepasswd /etc/x11vnc.passwd
 sudo rm /etc/systemd/system/x11vnc.service
