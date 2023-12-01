@@ -6,8 +6,16 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
-echo "Install XFCE"
+# install requirements
+echo "Install Requirements"
+sudo apt install \
+  bash-completion \
+  wget \
+  -y
+printf "\n\n"
+
 # install xfce
+echo "Install XFCE"
 sudo apt install \
   xorg \
   xfce4-panel \
@@ -17,23 +25,26 @@ sudo apt install \
   xfdesktop4 \
   xfwm4 \
   -y
+printf "\n\n"
 
-echo "Install VNC"
 # install vnc
+echo "Install VNC"
 sudo apt install \
   lightdm \
   x11vnc \
   -y
 
 sudo x11vnc -storepasswd /etc/x11vnc.passwd
-wget https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/armbian-kiosk/x11vnc.service -O /tmp/x11vnc.service
-sudo cp /tmp/x11vnc.service /etc/systemd/system/x11vnc.service
+sudo rm /etc/systemd/system/x11vnc.service
+sudo wget https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/armbian-kiosk/x11vnc.service -O /etc/systemd/system/x11vnc.service
 
 sudo systemctl daemon-reload
 sudo systemctl enable x11vnc.service
 sudo systemctl start x11vnc
+printf "\n\n"
 
 # testing
+echo "install desktop testing"
 sudo apt install \
   pavucontrol \
   pulseaudio \
@@ -41,6 +52,11 @@ sudo apt install \
   \
   network-manager-gnome \
   -y
+printf "\n\n"
 
 # apps
+echo "install Apps"
 sudo apt install chromium -y
+printf "\n\n"
+
+echo "install done."
