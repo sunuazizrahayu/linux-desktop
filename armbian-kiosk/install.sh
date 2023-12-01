@@ -6,6 +6,7 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
+echo "Install XFCE"
 # install xfce
 sudo apt install \
   xorg \
@@ -17,6 +18,7 @@ sudo apt install \
   xfwm4 \
   -y
 
+echo "Install VNC"
 # install vnc
 sudo apt install \
   lightdm \
@@ -24,19 +26,20 @@ sudo apt install \
   -y
 
 sudo x11vnc -storepasswd /etc/x11vnc.passwd
-echo -e "[Unit]\nDescription=Start x11vnc at startup.\nAfter=multi-user.target\n\n[Service]\nType=simple\nExecStart=x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /etc/x11vnc.passwd -rfbport 5900 -shared\n\n[Install]\nWantedBy=multi-user.target" | sudo tee /etc/systemd/system/x11vnc.service > /dev/null
-sudo systemctl daemon-reload 
-sudo systemctl start x11vnc 
+wget -O https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/armbian-kiosk/x11vnc.service /tmp/x11vnc.service
+sudo cp /tmp/x11vnc.service /etc/systemd/system/x11vnc.service
+
+sudo systemctl daemon-reload
+sudo systemctl enable x11vnc.service
+sudo systemctl start x11vnc
 
 # testing
 sudo apt install \
-  armbian-config \
-  \
   pavucontrol \
   pulseaudio \
   xfce4-pulseaudio-plugin \
   \
   network-manager-gnome
 
-# display
+# apps
 sudo apt install chromium
