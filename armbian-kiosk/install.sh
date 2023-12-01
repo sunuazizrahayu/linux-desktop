@@ -39,7 +39,8 @@ sudo apt install \
   pulseaudio \
   xfce4-pulseaudio-plugin \
   \
-  network-manager-gnome
+  network-manager-gnome \
+  -y
 
 # apps
-sudo apt install chromium
+sudo apt install chromium -y
