@@ -6,13 +6,20 @@ if ! [ $(id -u) = 0 ]; then
   exit 1
 fi
 
+# update repository
+echo "Update Repository"
+sudo apt update
+printf "\n\n\n"
+
+
 # install requirements
 echo "Install Requirements"
 sudo apt install \
   bash-completion \
   wget \
   -y
-printf "\n\n"
+printf "\n\n\n"
+
 
 # install xfce
 echo "Install XFCE"
@@ -25,7 +32,8 @@ sudo apt install \
   xfdesktop4 \
   xfwm4 \
   -y
-printf "\n\n"
+printf "\n\n\n"
+
 
 # install vnc
 echo "Install VNC"
@@ -41,7 +49,8 @@ sudo wget https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/ar
 sudo systemctl daemon-reload
 sudo systemctl enable x11vnc.service
 sudo systemctl start x11vnc
-printf "\n\n"
+printf "\n\n\n"
+
 
 # testing
 echo "install desktop testing"
@@ -52,11 +61,14 @@ sudo apt install \
   \
   network-manager-gnome \
   -y
-printf "\n\n"
+printf "\n\n\n"
+
 
 # apps
 echo "install Apps"
 sudo apt install chromium -y
-printf "\n\n"
+printf "\n\n\n"
 
+
+# finish
 echo "install done."
