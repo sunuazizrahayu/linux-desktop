@@ -17,6 +17,7 @@ echo "Install Requirements"
 sudo apt install \
   bash-completion \
   wget \
+  unzip \
   -y
 printf "\n\n\n"
 
