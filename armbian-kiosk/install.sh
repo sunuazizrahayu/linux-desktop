@@ -14,12 +14,15 @@ sudo apt install \
   xfce4-terminal \
   xfconf \
   xfdesktop4 \
-  xfwm4
+  xfwm4 \
+  -y
 
 # install vnc
 sudo apt install \
   lightdm \
-  x11vnc
+  x11vnc \
+  -y
+
 sudo x11vnc -storepasswd /etc/x11vnc.passwd
 echo -e "[Unit]\nDescription=Start x11vnc at startup.\nAfter=multi-user.target\n\n[Service]\nType=simple\nExecStart=x11vnc -auth guess -forever -loop -noxdamage -repeat -rfbauth /etc/x11vnc.passwd -rfbport 5900 -shared\n\n[Install]\nWantedBy=multi-user.target" | sudo tee /etc/systemd/system/x11vnc.service > /dev/null
 sudo systemctl daemon-reload 
