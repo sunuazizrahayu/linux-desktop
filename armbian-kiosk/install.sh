@@ -26,7 +26,7 @@ sudo apt install \
   -y
 
 sudo x11vnc -storepasswd /etc/x11vnc.passwd
-wget -O https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/armbian-kiosk/x11vnc.service /tmp/x11vnc.service
+wget https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/armbian-kiosk/x11vnc.service -O /tmp/x11vnc.service
 sudo cp /tmp/x11vnc.service /etc/systemd/system/x11vnc.service
 
 sudo systemctl daemon-reload
