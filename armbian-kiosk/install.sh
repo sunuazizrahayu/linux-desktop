@@ -41,7 +41,7 @@ printf "\n\n\n"
 echo "Install VNC"
 sudo apt install x11vnc -y
 
-sudo x11vnc -storepasswd /etc/x11vnc.passwd
+sudo x11vnc -storepasswd vnc /etc/x11vnc.passwd
 sudo rm /etc/systemd/system/x11vnc.service
 sudo wget https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop/main/armbian-kiosk/x11vnc.service -O /etc/systemd/system/x11vnc.service
 
