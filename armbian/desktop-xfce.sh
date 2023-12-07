@@ -57,3 +57,13 @@ sudo apt install \
   -y
 printf "\n\n\n"
 
+
+echo "Install Software"
+sudo apt install \
+  mousepad \
+  ristretto \
+  \
+  xarchiver \
+  thunar-archive-plugin \
+  -y
+  
