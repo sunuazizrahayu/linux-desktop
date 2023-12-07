@@ -39,6 +39,17 @@ sudo apt install \
   -y
 printf "\n\n\n"
 
+echo "Install XFCE additional"
+sudo apt install \
+  xfce4-power-manager \
+  \
+  pavucontrol \
+  pulseaudio \
+  xfce4-pulseaudio-plugin \
+  \
+  network-manager-gnome \
+  -y
+
 echo "Install XFCE Requirements"
 sudo apt install \
   xorg \
