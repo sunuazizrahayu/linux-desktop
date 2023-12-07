@@ -49,6 +49,7 @@ sudo apt install \
   \
   network-manager-gnome \
   -y
+printf "\n\n\n"
 
 echo "Install XFCE Requirements"
 sudo apt install \
