@@ -66,4 +66,15 @@ sudo apt install \
   xarchiver \
   thunar-archive-plugin \
   -y
-  
+printf "\n\n\n"
+
+
+echo "Install appearance support"
+sudo apt install \
+  fonts-cantarell \
+  fonts-noto-core \
+  fonts-noto-color-emoji \
+  -y
+printf "\n\n\n"
+
+echo "Done."
