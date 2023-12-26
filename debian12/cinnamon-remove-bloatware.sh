@@ -8,15 +8,20 @@ fi
 
 
 # remove Games
-echo "remove Games"
+printf "remove Games \n"
 sudo apt remove gnome-games -y
+sudo apt autoremove -y
+printf "\n"
 
 
 # remove Accessories
-echo "remove Accessories"
+printf "remove Accessories \n"
 sudo apt remove \
   debian-reference-common \
   -y
+printf "\n"
 
-echo "auto remove & unused associated"
+printf "auto remove & unused associated \n"
 sudo apt autoremove -y
+
+printf "Finish \n"
