@@ -52,4 +52,10 @@ sudo apt remove gnome-sound-recorder -y #sound recorder
 sudo apt remove totem totem-common -y  #videos
 sudo apt autoremove -y
 
+# remove Preferences
+printf "remove Preferences \n"
+sudo apt remove anthy -y
+sudo apt remove kasumi -y #anthy dictionary editor
+sudo apt autoremove -y
+
 printf "Finish \n"
