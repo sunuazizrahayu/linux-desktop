@@ -22,9 +22,24 @@ sudo apt remove \
   gnote \
   yelp \
   -y
+sudo apt autoremove -y
 printf "\n"
 
-printf "auto remove & unused associated \n"
+# remove Education
+printf "remove Education \n"
+sudo apt remove \
+  goldendict \
+  -y
 sudo apt autoremove -y
+printf "\n"
+
+# remove Graphics
+printf "remove Graphics \n"
+sudo apt remove \
+  shotwell \
+  -y
+sudo apt autoremove -y
+printf "\n"
+
 
 printf "Finish \n"
