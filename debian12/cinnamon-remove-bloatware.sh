@@ -47,9 +47,9 @@ printf "\n"
 # remove Multimedia
 printf "remove Multimedia \n"
 sudo apt remove brasero brasero-common -y #brasero
-sudo apt remove cheese -y  #cheese
+sudo apt remove cheese cheese-common -y  #cheese
 sudo apt remove gnome-sound-recorder -y #sound recorder
-sudo apt remove totem -y  #videos
+sudo apt remove totem totem-common -y  #videos
 sudo apt autoremove -y
 
 printf "Finish \n"
