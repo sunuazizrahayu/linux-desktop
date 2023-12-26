@@ -16,12 +16,7 @@ sudo apt remove gnome-games -y
 echo "remove Accessories"
 sudo apt remove \
   debian-reference-common \
-  totem \
-  brasero brasero-common \
-  cheese \
-  sound-juicer \
-  gnome-sound-recorder \
   -y
 
 echo "auto remove & unused associated"
-echo autoremove unused associated files.
+sudo apt autoremove -y
