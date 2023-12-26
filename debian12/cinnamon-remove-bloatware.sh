@@ -18,6 +18,9 @@ printf "\n"
 printf "remove Accessories \n"
 sudo apt remove \
   debian-reference-common \
+  deja-dup \
+  gnote \
+  yelp \
   -y
 printf "\n"
 
