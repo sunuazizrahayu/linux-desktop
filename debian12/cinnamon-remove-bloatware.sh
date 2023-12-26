@@ -16,38 +16,30 @@ printf "\n"
 
 # remove Accessories
 printf "remove Accessories \n"
-sudo apt remove \
-  debian-reference-common \
-  deja-dup \
-  gnote \
-  yelp \
-  -y
+sudo apt remove debian-reference-common -y
+sudo apt remove deja-dup -y
+sudo apt remove gnote -y
+sudo apt remove yelp -y
 sudo apt autoremove -y
 printf "\n"
 
 # remove Education
 printf "remove Education \n"
-sudo apt remove \
-  goldendict \
-  -y
+sudo apt remove goldendict -y
 sudo apt autoremove -y
 printf "\n"
 
 # remove Graphics
 printf "remove Graphics \n"
-sudo apt remove \
-  shotwell \
-  -y
+sudo apt remove shotwell -y
 sudo apt autoremove -y
 printf "\n"
 
 # remove Internet
 printf "remove Internet \n"
-sudo apt remove \
-  pidgin \
-  hexchat \
-  transmission-gtk \
-  -y
+sudo apt remove pidgin -y
+sudo apt remove hexchat -y
+sudo apt remove transmission-gtk -y
 sudo apt autoremove -y
 printf "\n"
 
