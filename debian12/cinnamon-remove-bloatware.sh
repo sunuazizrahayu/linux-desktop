@@ -15,6 +15,7 @@ sudo apt remove gnome-games -y
 # remove Accessories
 echo "remove Accessories"
 sudo apt remove \
+  debian-reference-common \
   totem \
   brasero brasero-common \
   cheese \
