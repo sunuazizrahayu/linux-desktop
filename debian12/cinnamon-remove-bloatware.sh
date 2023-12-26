@@ -17,9 +17,9 @@ printf "\n"
 # remove Accessories
 printf "remove Accessories \n"
 sudo apt remove debian-reference-common -y
-sudo apt remove deja-dup -y
+sudo apt remove deja-dup -y #backup
 sudo apt remove gnote -y
-sudo apt remove yelp -y
+sudo apt remove yelp -y #help
 sudo apt autoremove -y
 printf "\n"
 
@@ -32,6 +32,7 @@ printf "\n"
 # remove Graphics
 printf "remove Graphics \n"
 sudo apt remove shotwell -y
+sudo apt remove simple-scan -y #document scanner
 sudo apt autoremove -y
 printf "\n"
 
