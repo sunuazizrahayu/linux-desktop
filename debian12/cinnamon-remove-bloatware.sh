@@ -40,7 +40,7 @@ printf "\n"
 printf "remove Internet \n"
 sudo apt remove pidgin -y
 sudo apt remove hexchat -y
-sudo apt remove transmission-gtk -y
+sudo apt remove transmission-gtk transmission-common -y
 sudo apt autoremove -y
 printf "\n"
 
