@@ -41,5 +41,22 @@ sudo apt remove \
 sudo apt autoremove -y
 printf "\n"
 
+# remove Internet
+printf "remove Internet \n"
+sudo apt remove \
+  pidgin \
+  hexchat \
+  transmission-gtk \
+  -y
+sudo apt autoremove -y
+printf "\n"
+
+# remove Multimedia
+printf "remove Multimedia \n"
+sudo apt remove brasero brasero-common -y #brasero
+sudo apt remove cheese -y  #cheese
+sudo apt remove gnome-sound-recorder -y #sound recorder
+sudo apt remove totem -y  #videos
+sudo apt autoremove -y
 
 printf "Finish \n"
