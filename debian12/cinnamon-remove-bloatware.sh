@@ -76,14 +76,4 @@ sudo apt remove uim uim-data uim-xim uim-mozc -y
 sudo apt autoremove -y
 printf "\n"
 
-# remove System
-printf "remove System \n"
-sudo apt-get remove hunspell -y
-sudo apt-get remove aspell -y
-sudo apt-get remove eject -y
-sudo apt-get remove vino -y
-sudo apt autoremove -y
-printf "\n"
-
-
 printf "Finish \n"
