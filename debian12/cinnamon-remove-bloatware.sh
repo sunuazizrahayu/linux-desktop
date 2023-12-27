@@ -9,15 +9,14 @@ fi
 
 # remove Games
 printf "remove Games \n"
-sudo apt remove gnome-games -y
-sudo apt autoremove -y
+sudo apt autoremove --purge gnome-games -y
 printf "\n"
 
 
 # remove Accessories
 printf "remove Accessories \n"
-sudo apt remove debian-reference-common -y
 sudo apt remove deja-dup -y #backup
+sudo apt remove debian-reference-common -y
 sudo apt remove gnote -y
 sudo apt remove yelp -y #help
 sudo apt autoremove -y
