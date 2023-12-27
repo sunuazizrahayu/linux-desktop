@@ -54,20 +54,19 @@ printf "\n"
 
 # remove Administrator
 printf "remove Administrator \n"
-sudo apt remove gnome-software -y #software
 sudo apt remove gnome-logs -y #Logs
-sudo apt remove xterm -y #xterm terminal
-sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
-sudo apt remove xiterm+thai -y #thai x terminal
+sudo apt remove gnome-software -y #software
 sudo apt remove malcontent -y #parental controls
+sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
+sudo apt remove xterm -y #xterm terminal
+sudo apt remove xiterm+thai -y #thai x terminal
 sudo apt autoremove -y
 printf "\n"
 
 # remove Preferences
 printf "remove Preferences \n"
-sudo apt remove anthy anthy-common -y
-sudo apt remove kasumi -y #anthy dictionary editor
-sudo apt remove ibus -y
+sudo apt autoremove --purge anthy anthy-common kasumi -y #anthy dictionary editor
+sudo apt remove ibus -y #Ibus Preferences
 sudo apt remove im-config -y #input method
 sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
 sudo apt remove uim uim-data uim-xim uim-mozc -y
