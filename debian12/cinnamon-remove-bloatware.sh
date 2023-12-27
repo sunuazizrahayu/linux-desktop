@@ -75,6 +75,11 @@ printf "\n"
 sudo apt remove im-config -y
 sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
 sudo apt remove uim uim-data uim-xim uim-mozc -y
+sudo apt autoremove -y
+printf "\n"
+
+# remove System
+printf "remove System \n"
 sudo apt-get remove hunspell -y
 sudo apt-get remove aspell -y
 sudo apt-get remove eject -y
