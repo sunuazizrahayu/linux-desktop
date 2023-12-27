@@ -36,10 +36,10 @@ printf "\n"
 
 # remove Internet
 printf "remove Internet \n"
-sudo apt remove pidgin -y
-sudo apt remove hexchat -y
-sudo apt remove transmission-gtk transmission-common -y
-sudo apt remove remmina -y #remmina (remote desktop control)
+sudo apt autoremove --purge hexchat -y
+sudo apt autoremove --purge pidgin -y
+sudo apt autoremove --purge remmina -y #remmina (remote desktop control)
+sudo apt autoremove --purge transmission-gtk transmission-common -y
 sudo apt autoremove -y
 printf "\n"
 
