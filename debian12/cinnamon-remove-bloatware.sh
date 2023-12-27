@@ -61,6 +61,8 @@ sudo apt remove xterm -y #xterm terminal
 sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
 sudo apt remove xiterm+thai -y #thai x terminal
 sudo apt remove malcontent -y #parental controls
+sudo apt remove ibus -y
+sudo apt remove gnome-logs -y #Logs
 sudo apt autoremove -y
 printf "\n"
 
