@@ -63,6 +63,7 @@ sudo apt remove xiterm+thai -y #thai x terminal
 sudo apt remove malcontent -y #parental controls
 sudo apt remove ibus -y
 sudo apt remove gnome-logs -y #Logs
+sudo apt remove synaptic -y #synaptic package manager
 sudo apt autoremove -y
 printf "\n"
 
