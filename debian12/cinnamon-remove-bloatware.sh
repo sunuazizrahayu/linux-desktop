@@ -71,10 +71,6 @@ sudo apt remove anthy anthy-common -y
 sudo apt remove kasumi -y #anthy dictionary editor
 sudo apt remove ibus -y
 sudo apt remove im-config -y #input method
-sudo apt autoremove -y
-printf "\n"
-
-# remove Preferences (System)
 sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
 sudo apt remove uim uim-data uim-xim uim-mozc -y
 sudo apt autoremove -y
