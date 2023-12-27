@@ -53,6 +53,16 @@ sudo apt remove totem totem-common -y  #videos
 sudo apt autoremove -y
 printf "\n"
 
+# remove Administrator
+printf "remove Administrator \n"
+sudo apt remove gnome-software -y #software
+sudo apt remove xterm -y #xterm terminal
+sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
+sudo apt remove xiterm+thai -y #thai x terminal
+sudo apt remove malcontent -y #parental controls
+sudo apt autoremove -y
+printf "\n"
+
 # remove Preferences
 printf "remove Preferences \n"
 sudo apt remove anthy anthy-common -y
@@ -61,18 +71,17 @@ sudo apt autoremove -y
 printf "\n"
 
 # remove Preferences (System)
-sudo apt remove uim uim-data uim-xim uim-mozc -y
-sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
 sudo apt remove im-config -y
-sudo apt autoremove -y
-printf "\n"
-
-# remove Administrator
-printf "remove Administrator \n"
-sudo apt remove gnome-software -y #software
-sudo apt remove xterm -y #xterm terminal
-sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
-sudo apt remove xiterm+thai -y #thai x terminal
+sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
+sudo apt remove uim uim-data uim-xim uim-mozc -y
+sudo apt-get remove fcitx5-data -y
+sudo apt-get remove fcitx-bin -y
+sudo apt-get remove fcitx-module-dbus -y
+sudo apt-get remove fcitx-config-common -y
+sudo apt-get remove hunspell -y
+sudo apt-get remove aspell -y
+sudo apt-get remove eject -y
+sudo apt-get remove vino -y
 sudo apt autoremove -y
 printf "\n"
 
