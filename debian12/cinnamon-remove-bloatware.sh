@@ -24,14 +24,13 @@ printf "\n"
 
 # remove Education
 printf "remove Education \n"
-sudo apt remove goldendict -y
-sudo apt autoremove -y
+sudo apt autoremove --purge goldendict -y
 printf "\n"
 
 # remove Graphics
 printf "remove Graphics \n"
-sudo apt remove shotwell -y
-sudo apt remove simple-scan -y #document scanner
+sudo apt autoremove --purge simple-scan -y #document scanner
+sudo apt autoremove --purge shotwell -y
 sudo apt autoremove -y
 printf "\n"
 
