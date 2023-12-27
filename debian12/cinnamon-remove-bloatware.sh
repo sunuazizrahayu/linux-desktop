@@ -60,5 +60,15 @@ sudo apt remove kasumi -y #anthy dictionary editor
 sudo apt autoremove -y
 printf "\n"
 
+# remove Administrator
+printf "remove Administrator \n"
+sudo apt remove gnome-software -y #software
+sudo apt remove xterm -y #xterm terminal
+sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
+sudo apt remove xiterm+thai -y #thai x terminal
+sudo apt remove gnome-logs -y #logs
+sudo apt autoremove -y
+printf "\n"
+
 
 printf "Finish \n"
