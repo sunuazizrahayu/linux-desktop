@@ -75,10 +75,6 @@ printf "\n"
 sudo apt remove im-config -y
 sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
 sudo apt remove uim uim-data uim-xim uim-mozc -y
-sudo apt-get remove fcitx5-data -y
-sudo apt-get remove fcitx-bin -y
-sudo apt-get remove fcitx-module-dbus -y
-sudo apt-get remove fcitx-config-common -y
 sudo apt-get remove hunspell -y
 sudo apt-get remove aspell -y
 sudo apt-get remove eject -y
