@@ -57,13 +57,11 @@ printf "\n"
 # remove Administrator
 printf "remove Administrator \n"
 sudo apt remove gnome-software -y #software
+sudo apt remove gnome-logs -y #Logs
 sudo apt remove xterm -y #xterm terminal
 sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
 sudo apt remove xiterm+thai -y #thai x terminal
 sudo apt remove malcontent -y #parental controls
-sudo apt remove ibus -y
-sudo apt remove gnome-logs -y #Logs
-sudo apt remove synaptic -y #synaptic package manager
 sudo apt autoremove -y
 printf "\n"
 
@@ -71,6 +69,7 @@ printf "\n"
 printf "remove Preferences \n"
 sudo apt remove anthy anthy-common -y
 sudo apt remove kasumi -y #anthy dictionary editor
+sudo apt remove ibus -y
 sudo apt autoremove -y
 printf "\n"
 
