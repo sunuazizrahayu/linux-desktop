@@ -73,4 +73,10 @@ sudo apt remove uim uim-data uim-xim uim-mozc -y
 sudo apt autoremove -y
 printf "\n"
 
+# remove system
+printf "remove System Data \n"
+sudo apt autoremove --purge mate-themes mate-icon-theme -y #mate theme
+
+
+
 printf "Finish \n"
