@@ -55,8 +55,15 @@ printf "\n"
 
 # remove Preferences
 printf "remove Preferences \n"
-sudo apt remove anthy -y
+sudo apt remove anthy anthy-common -y
 sudo apt remove kasumi -y #anthy dictionary editor
+sudo apt autoremove -y
+printf "\n"
+
+# remove Preferences (System)
+sudo apt remove uim uim-data uim-xim uim-mozc -y
+sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
+sudo apt remove im-config -y
 sudo apt autoremove -y
 printf "\n"
 
@@ -66,7 +73,6 @@ sudo apt remove gnome-software -y #software
 sudo apt remove xterm -y #xterm terminal
 sudo apt remove mlterm mlterm-common mlterm-tiny -y #multilanguage terminal
 sudo apt remove xiterm+thai -y #thai x terminal
-sudo apt remove gnome-logs -y #logs
 sudo apt autoremove -y
 printf "\n"
 
