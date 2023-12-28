@@ -22,10 +22,12 @@ sudo apt remove yelp -y #help
 sudo apt autoremove -y
 printf "\n"
 
+
 # remove Education
 printf "remove Education \n"
 sudo apt autoremove --purge goldendict -y
 printf "\n"
+
 
 # remove Graphics
 printf "remove Graphics \n"
@@ -33,6 +35,7 @@ sudo apt autoremove --purge simple-scan -y #document scanner
 sudo apt autoremove --purge shotwell -y
 sudo apt autoremove -y
 printf "\n"
+
 
 # remove Internet
 printf "remove Internet \n"
@@ -43,6 +46,7 @@ sudo apt autoremove --purge transmission-gtk transmission-common -y
 sudo apt autoremove -y
 printf "\n"
 
+
 # remove Multimedia
 printf "remove Multimedia \n"
 sudo apt remove brasero brasero-common -y #brasero
@@ -51,6 +55,7 @@ sudo apt remove gnome-sound-recorder -y #sound recorder
 sudo apt remove totem totem-common -y  #videos
 sudo apt autoremove -y
 printf "\n"
+
 
 # remove Administrator
 printf "remove Administrator \n"
@@ -63,15 +68,19 @@ sudo apt remove xiterm+thai -y #thai x terminal
 sudo apt autoremove -y
 printf "\n"
 
+
 # remove Preferences
 printf "remove Preferences \n"
 sudo apt autoremove --purge anthy anthy-common kasumi -y #anthy dictionary editor
 sudo apt remove ibus -y #Ibus Preferences
+rm -rf /usr/share/ibus/
+rm -rf /usr/share/ibus-hangul/
 sudo apt remove im-config -y #input method
 sudo apt remove mozc-utils-gui mozc-data mozc-server -y #mozc
 sudo apt remove uim uim-data uim-xim uim-mozc -y
 sudo apt autoremove -y
 printf "\n"
+
 
 # remove system
 printf "remove System Data \n"
