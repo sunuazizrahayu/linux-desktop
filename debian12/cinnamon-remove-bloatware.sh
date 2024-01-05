@@ -22,6 +22,10 @@ sudo apt remove yelp -y #help
 sudo apt autoremove -y
 printf "\n"
 
+# graphics
+printf "remove Accessories \n"
+# sudo apt autoremove --purge eog #image viewer
+
 
 # remove Education
 printf "remove Education \n"
