@@ -33,7 +33,17 @@ echo "Install Cinnamon"
 sudo apt install \
   cinnamon-core \
   -y
+echo ""
 
 # remove cinnamon core unused package
+echo "Remove unused package"
 sudo apt autoremove --purge zutty -y
 sudo apt autoremove --purge malcontent -y
+echo ""
+
+# install appearance
+echo "Install Appearance Package"
+sudo apt install \
+  papirus-icon-theme \
+  fonts-cantarell \
+  -y
