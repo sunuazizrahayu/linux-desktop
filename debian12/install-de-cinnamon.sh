@@ -29,10 +29,12 @@ sudo apt install \
 echo ""
 
 # install
-echo "Install Cinnamon"
+echo "Install Cinnamon and other supported package"
 sudo apt install \
   cinnamon-core \
   -y
+sudo apt install file-roller -y  # archive manager
+sudo apt install eog -y  # image viewer
 echo ""
 
 # remove cinnamon core unused package
