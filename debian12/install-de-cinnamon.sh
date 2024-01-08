@@ -11,7 +11,7 @@ echo "Updating repo"
 sudo apt update
 echo ""
 
-# tools
+# install requirements
 echo "Install prequites"
 sudo apt install \
   sudo \
@@ -19,6 +19,14 @@ sudo apt install \
   curl \
   wget \
   -y
+echo ""
+
+# install tools
+echo "Install tools"
+sudo apt install \
+  htop \
+  -y
+echo ""
 
 # install
 echo "Install Cinnamon"
