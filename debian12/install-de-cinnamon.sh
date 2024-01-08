@@ -33,3 +33,9 @@ echo "Install Cinnamon"
 sudo apt install \
   cinnamon-core \
   -y
+
+# remove cinnamon core unused package
+sudo apt autoremove --purge \
+  zutty #zutty \
+  malcontent #parental \
+  -y
