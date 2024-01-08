@@ -35,7 +35,5 @@ sudo apt install \
   -y
 
 # remove cinnamon core unused package
-sudo apt autoremove --purge \
-  zutty #zutty \
-  malcontent #parental \
-  -y
+sudo apt autoremove --purge zutty -y
+sudo apt autoremove --purge malcontent -y
