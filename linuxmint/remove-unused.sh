@@ -4,6 +4,7 @@ sudo apt purge libuno-* libunoloader-java -y
 sudo apt purge fonts-opensymbol -y
 sudo rm -rf /var/lib/libreoffice
 sudo rm -rf /usr/lib/libreoffice
+sudo rm -rf /etc/libreoffice
 sudo apt autoremove
 
 # unused tools
