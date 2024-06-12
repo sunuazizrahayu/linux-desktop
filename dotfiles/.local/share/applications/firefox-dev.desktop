@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Firefox Dev
+Exec=firefox -P default --name Firefox-Nightly --class Firefox-Nightly %u
+Terminal=false
+Type=Application
+Icon=firefox-nightly
+StartupWMClass=Firefox-Nightly
