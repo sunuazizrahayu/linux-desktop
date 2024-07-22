@@ -41,16 +41,26 @@ printf "\n\nCOPYING skel\n"
 cp -R $SCRIPT_DIR/remaster/etc/skel/. /etc/skel
 
 # copy master `skel` to each user
-input="/etc/passwd"
-while IFS= read -r line
-do
-  if [[ "$line" == *':/home/'* ]]; then
-    USER=$(echo $line | sed 's/:.*//')
-    echo "Copying skel to user: " $USER
-    cp -R $SCRIPT_DIR/remaster/etc/skel/.config/ /home/$USER/
-    chown -R $USER:$USER /home/$USER/.config/
-  fi
-done < "$input"
+#input="/etc/passwd"
+#while IFS= read -r line
+#do
+#  if [[ "$line" == *':/home/'* ]]; then
+#    USER=$(echo $line | sed 's/:.*//')
+#    echo "Copying skel to user: " $USER
+#    cp -R $SCRIPT_DIR/remaster/etc/skel/.config/ /home/$USER/
+#    chown -R $USER:$USER /home/$USER/.config/
+#  fi
+#done < "$input"
+
+getent passwd | while IFS=: read -r USER _ _ _ _ HOME _; do
+  case "$HOME" in
+    /home/*)
+      echo "Copying skel to user: $USER"
+      cp -R "$SCRIPT_DIR/remaster/etc/skel/.config/" "$HOME/"
+      chown -R $USER:$USER "$HOME/.config/"
+      ;;
+  esac
+done
 
 
 printf "\n\nFinish.\n"
