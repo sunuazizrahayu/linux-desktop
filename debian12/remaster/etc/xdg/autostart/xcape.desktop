@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=xcape
+Comment=Make SuperL open Whiskermenu
+Exec=xcape -e 'Super_L=Alt_L|F1' -t 200
+OnlyShowIn=XFCE;
+RunHook=0
+StartupNotify=false
+Terminal=false
+Hidden=false
