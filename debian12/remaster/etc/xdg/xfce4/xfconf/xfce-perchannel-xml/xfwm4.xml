@@ -4,5 +4,8 @@
   <property name="general" type="empty">
     <property name="button_layout" type="string" value="|HMC"/>
     <property name="title_font" type="string" value="Sans Bold 9"/>
+    <property name="cycle_draw_frame" type="bool" value="false"/>
+    <property name="raise_with_any_button" type="bool" value="false"/>
+    <property name="show_dock_shadow" type="bool" value="false"/>
   </property>
 </channel>
