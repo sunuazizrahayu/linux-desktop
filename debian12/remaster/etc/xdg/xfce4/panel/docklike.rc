@@ -1,0 +1,5 @@
+[user]
+onlyDisplayVisible=true
+onlyDisplayScreen=true
+showPreviews=true
+indicatorColor=rgb(249,240,107)
