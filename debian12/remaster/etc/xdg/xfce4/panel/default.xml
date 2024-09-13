@@ -43,9 +43,6 @@
     </property>
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="ethernet network connection “wired connection 1” active"/>
-      </property>
     </property>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
