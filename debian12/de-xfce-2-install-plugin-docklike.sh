@@ -25,3 +25,5 @@ sudo apt purge \
   libxfce4ui-2-dev libxfce4panel-2.0-dev \
   g++ \
   -y
+
+sudo apt purge zutty -y
