@@ -73,9 +73,12 @@ apt install \
   tango-icon-theme \
   -y
 
+echo "Remove unused"
+apt purge zutty -y
+
 echo "Generate Fonts cache"
 fc-cache -f -v
 
 
-wget -c https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop-environment/main/debian12/xfce-docklike.sh
+wget -c https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop-environment/main/debian12/de-xfce-2-install-plugin-docklike.sh
 wget -c https://raw.githubusercontent.com/sunuazizrahayu/linux-desktop-environment/main/debian12/install-software.sh
