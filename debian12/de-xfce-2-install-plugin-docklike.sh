@@ -15,8 +15,9 @@ sudo apt install \
 
 # install
 current_dir=$(pwd)
-wget https://archive.xfce.org/src/panel-plugins/xfce4-docklike-plugin/0.4/xfce4-docklike-plugin-0.4.0.tar.bz2 -P /tmp
-tar -xvjf /tmp/xfce4-docklike-plugin-0.4.0.tar.bz2 && cd /tmp/xfce4-docklike-plugin-0.4.0
+cd /tmp
+wget https://archive.xfce.org/src/panel-plugins/xfce4-docklike-plugin/0.4/xfce4-docklike-plugin-0.4.0.tar.bz2
+tar -xvjf xfce4-docklike-plugin-0.4.0.tar.bz2 && cd xfce4-docklike-plugin-0.4.0
 ./configure
 make
 sudo make install
