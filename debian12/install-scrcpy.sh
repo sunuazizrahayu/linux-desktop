@@ -11,19 +11,21 @@ fi
 sudo apt install ffmpeg libsdl2-2.0-0 adb wget \
                  gcc git pkg-config meson ninja-build libsdl2-dev \
                  libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev \
-                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev
+                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev \
+                 -y
 
 # get code
-wget https://github.com/Genymobile/scrcpy/archive/refs/tags/v2.6.1.zip -P /tmp
-wget https://github.com/Genymobile/scrcpy/releases/download/v2.6.1/scrcpy-server-v2.6.1 -P /tmp
+version="2.6.1"
+wget https://github.com/Genymobile/scrcpy/archive/refs/tags/v$version.zip -P /tmp
+wget https://github.com/Genymobile/scrcpy/releases/download/v$version/scrcpy-server-v$version -P /tmp
 
 # install
 current_dir=$(pwd)
 cd /tmp
-unzip v2.6.1.zip
-cd scrcpy-2.6.1
-./install_release.sh
+unzip v$version.zip
+cd scrcpy-$version
+sudo ./install_release.sh
 
 # set server
-cp scrcpy-server-v2.6.1 /usr/local/share/scrcpy/scrcpy-server
+sudo cp /tmp/scrcpy-server-v$version /usr/local/share/scrcpy/scrcpy-server
 cd "$current_dir"
