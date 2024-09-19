@@ -12,9 +12,11 @@ sudo dpkg -i /tmp/cloudflared-linux-amd64.deb
 # verify `cloudflared` daemon is installed
 cloudflared --version
 sleep 1
+printf "\n\n"
 
 # check network
 dig +short @127.0.0.1 -p5553 cloudflare.com AAAA
+printf "\n\n"
 
 # create cloudflared service
 sudo tee /etc/systemd/system/cloudflared-proxy-dns.service >/dev/null <<EOF
@@ -35,6 +37,7 @@ EOF
 
 # enable cloudflared service
 sudo systemctl enable --now cloudflared-proxy-dns
+printf "\n\n"
 
 
 # set network manager
@@ -42,13 +45,18 @@ sudo tee /etc/NetworkManager/conf.d/dns.conf >/dev/null <<EOF
 [main]
 dns=none
 EOF
+printf "\n\n"
 
 # remove current config
 sudo rm -f /etc/resolv.conf
 echo nameserver 127.0.0.1 | sudo tee /etc/resolv.conf >/dev/null
+printf "\n\n"
 
 # restart network service
 sudo systemctl restart NetworkManager
+sleep 3
+printf "\n\n\n"
 
 # check network
 dig +short @127.0.0.1 cloudflare.com AAAA
+printf "\n\n"
