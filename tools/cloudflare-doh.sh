@@ -7,7 +7,7 @@ fi
 
 # source: https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/dns-over-https-client/
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb -P /tmp
-sudo dpkg -i /tmp/cloudflared-linux-amd64.deb -y
+sudo dpkg -i /tmp/cloudflared-linux-amd64.deb
 
 # verify `cloudflared` daemon is installed
 cloudflared --version
