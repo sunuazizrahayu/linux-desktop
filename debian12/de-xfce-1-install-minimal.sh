@@ -42,6 +42,9 @@ apt install \
   xfce4-whiskermenu-plugin \
   -y
 
+# xfce thunar mounting android file_transfer
+apt install gvfs gvfs-fuse gvfs-backends -y
+
 echo "Install Networking"
 apt install \
   network-manager-gnome \
