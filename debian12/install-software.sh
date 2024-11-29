@@ -12,6 +12,10 @@ apt install wget curl \
   htop \
   -y
 
+# install adb + fastboot
+printf "\nInstall android tools...\n"
+apt install android-sdk-platform-tools -y
+
 printf "\nAdd Sublime repo...\n"
 rm /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
 rm /etc/apt/sources.list.d/sublime-text.list
