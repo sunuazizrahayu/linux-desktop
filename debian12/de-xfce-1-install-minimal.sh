@@ -62,6 +62,7 @@ apt install \
   ristretto \
   xarchiver \
   thunar-archive-plugin \
+  xfce4-screenshooter \
   \
   xcape \
   -y
