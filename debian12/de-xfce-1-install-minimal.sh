@@ -72,6 +72,7 @@ apt install \
   fonts-cantarell \
   fonts-noto-core \
   fonts-noto-color-emoji \
+  fonts-noto-cjk \
   \
   gnome-icon-theme \
   tango-icon-theme \
