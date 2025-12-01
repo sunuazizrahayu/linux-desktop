@@ -13,6 +13,8 @@ echo "deb [signed-by=/etc/apt/trusted.gpg.d/sublimehq-archive.gpg] https://downl
 sudo apt update
 sudo apt install sublime-text sublime-merge -y
 
+
+
 # install docker
 # https://docs.docker.com/engine/install/debian/
 printf "\n\nInstall Docker...\n"
