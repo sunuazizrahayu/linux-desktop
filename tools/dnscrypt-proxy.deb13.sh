@@ -21,16 +21,16 @@ dns=none
 EOF
 
 
+echo "[3] Restart NetworkManager..."
+sudo systemctl restart NetworkManager
 
-echo "[3] Configure /etc/resolv.conf..."
+
+echo "[4] Configure /etc/resolv.conf..."
 sudo rm -f /etc/resolv.conf
 echo "# DNSCrypt-Proxy
 nameserver 127.0.2.1
 options edns0" | sudo tee /etc/resolv.conf > /dev/null
 
 
-echo "[4] Restart NetworkManager..."
-sudo systemctl restart NetworkManager
 
-
-echo "FINISH"
+echo "[ FINISH ]"
